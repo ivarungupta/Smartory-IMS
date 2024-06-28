@@ -8,9 +8,11 @@ Smartory (Inventory Management System) is a software system for tracking invento
 ## Technologies Used
 - Oracle Database
 - Node.js
+- Express.js
 - HTML
 - CSS
 - EJS (Embedded JavaScript Templating)
+- Oracle SQL Developer
 
 ## Project Structure
 This project consists of multiple servers, each handling different aspects of the inventory management system. Here are the details of each server:
