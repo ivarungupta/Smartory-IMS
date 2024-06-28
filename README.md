@@ -81,7 +81,7 @@ This project consists of multiple servers, each handling different aspects of th
 ### Installation
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/Smartory-IMS.git
+    git clone https://github.com/ivarungupta/Smartory-IMS.git
     cd Smartory-IMS
     ```
 
