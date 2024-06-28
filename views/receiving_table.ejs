@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IMS-Receiving Table</title>
+  <link rel="icon" type="image/x-icon" href="info/favicon.png">
+
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: black;
+      color: white;
+    }
+    .dark-header {
+      background-color: #1174de;
+      color: white;
+      padding: 40px 0;
+      margin-bottom: 20px;
+    }
+    .custom-heading {
+      margin-bottom: 80px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row justify-content-center mb-4 dark-header">
+      <div class="col text-center">
+        <h1>INVENTORY MANAGEMENT SYSTEM</h1>
+      </div>
+    </div>
+    <div class="row mb-4 custom-heading">
+      <div class="col">
+        <h2>RECEIVING ORDER TABLE</h2>
+        <form action="/submitReceiving" method="post" id="receivingForm">
+          <!--<label for="cusid">Customer ID:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <input type="text" id="cusid" name="cusid">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
+          <label for="recno">Receipt No:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <input type="text" id="recno" name="recno"> <br>
+          <label for="recdate">Receipt Date:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <input type="date" id="recdate" name="recdate"> <br>
+          <label for="recquant">Receipt Quantity:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <input type="text" id="recquant" name="recquant"> <br>
+          <label for="revdate">Received Date:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <input type="date" id="revdate" name="revdate"> <br>
+          <label for="revquant">Received Quantity:</label>&nbsp;&nbsp;&nbsp;
+          <input type="text" id="revquant" name="revquant"> <br>
+          <label for="suppid">Supplier ID:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <input type="text" id="suppid" name="suppid"> <br>
+          <label for="itemid">Item ID:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <input type="text" id="itemid" name="itemid"> <br>
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+    </div>
+    <div class="table-responsive">
+      <table class="table table-striped table-bordered" id="table">
+        <thead class="thead-dark">
+          <table class="table table-striped" style="color: white; --bs-table-striped-color: white;">
+          <tr>
+            <th>ORDER_ID</th>
+            <th>RECEIPT_NO</th>
+            <th>RECEIPT_DATE</th>
+            <th>RECEIPT_QUANTITY</th>
+            <th>RECEIVED_DATE</th>
+            <th>RECEIVED_QUANTITY</th>
+            <th>SUPPLIER_ID</th>
+            <th>ITEM_ID</th>
+            <th>ACTIONS</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% data.forEach(row => { %>
+            <tr>
+              <td><%= row.ORDER_ID %></td>
+              <td><%= row.RECEIPT_NO %></td>
+              <td><%= row.RECEIPT_DATE %></td>
+              <td><%= row.RECEIPT_QUANTITY %></td>
+              <td><%= row.RECEIVED_DATE %></td>
+              <td><%= row.RECEIVED_QUANTITY %></td>
+              <td><%= row.SUPPLIER_ID %></td>
+              <td><%= row.ITEM_ID %></td>
+              <td>
+                <a href="/edit/<%= row.ORDER_ID %>" class="btn btn-primary btn-sm">Edit</a>
+              </td>
+            </tr>
+          <% }); %>
+        </tbody>
+      </table>
+    </div>
+    <a class="btn btn-primary" href="http://127.0.0.1:5500/landing.html" role="button">Back</a>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

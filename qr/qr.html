@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IMS- Items QR Generator</title>
+  <link rel="icon" type="image/x-icon" href="/favicon.png">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: black;
+      color: white;
+    }
+    .dark-header {
+      background-color: #1174de;
+      color: white;
+      padding: 40px 0;
+      margin-bottom: 20px;
+    }
+    .custom-heading {
+      margin-bottom: 80px;
+    }
+    #qrIframe {
+      width: 100%;
+      height: 300px;
+      border: none;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row justify-content-center mb-4 dark-header">
+      <div class="col text-center">
+        <h1>INVENTORY MANAGEMENT SYSTEM</h1>
+      </div>
+    </div>
+    <div class="row mb-4 custom-heading">
+      <div class="col">
+        <h2>ITEMS QR CODE GENERATOR</h2>
+        <form action="http://localhost:3011/submitItem" method="post" target="qrIframe" id="itemForm">
+            <label for="itemid">Item ID:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" id="itemid" name="itemid"><br>
+            <label for="itemname">Item Name:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" id="itemname" name="itemname"><br>
+            <label for="itemuom">Item UOM:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" id="itemuom" name="itemuom"><br>
+            <label for="itemreord">Item Reordering:</label>&nbsp;
+            <input type="text" id="itemreord" name="itemreord"><br>
+            <label for="itemquant">Item Quantity:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="text" id="itemquant" name="itemquant"><br>
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+    </div>
+    <iframe id="qrIframe" name="qrIframe"></iframe>
+    <a class="btn btn-primary" href="http://127.0.0.1:5500/landing.html" role="button">Back</a>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="qr.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IMS-ERD</title>
+  <link rel="icon" type="image/x-icon" href="/favicon.png">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="erd.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: black;
+      color: white;
+    }
+    .dark-header {
+      background-color: #1174de;
+      color: white;
+      padding: 40px 0;
+      margin-bottom: 20px;
+    }
+    .custom-heading {
+      margin-bottom: 80px;
+    }
+    .image-container {
+      height: 400px; /* Set the desired height for the images */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .image-container img {
+      height: 100%;
+      width: auto;
+      object-fit: contain;
+      transition: transform 0.3s ease, filter 0.3s ease;
+      border-radius: 15px; /* Rounded edges */
+    }
+    .image-container img:hover {
+      transform: scale(1.1); /* Scale image up by 10% */
+      filter: drop-shadow(0 0 1rem rgb(255, 217, 0));
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row justify-content-center mb-4 dark-header">
+      <div class="col text-center">
+        <h1>INVENTORY MANAGEMENT SYSTEM</h1>
+      </div>
+    </div>
+    <div class="row mb-4 custom-heading">
+      <div class="col-12 col-md-6 mb-4 d-flex flex-column align-items-center">
+        <h2>ER Diagram</h2>
+        <div class="image-container">
+          <img src="/info/ER DIAGRAM.png" alt="erd" id="erd" class="img-fluid">
+        </div>
+      </div>
+      <div class="col-12 col-md-6 mb-4 d-flex flex-column align-items-center">
+        <h2>ER Flow</h2>
+        <div class="image-container">
+          <img src="/info/ER FLOW.png" alt="erf" id="erf" class="img-fluid">
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col text-center">
+        <a class="btn btn-primary" href="http://127.0.0.1:5500/landing.html" role="button">Back</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

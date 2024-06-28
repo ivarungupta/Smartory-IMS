@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IMS-Edit Inspection</title>
+  <link rel="icon" type="image/x-icon" href="info/favicon.png">
+
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: black;
+      color: white;
+    }
+    .dark-header {
+      background-color: #1174de;
+      color: white;
+      padding: 40px 0;
+      margin-bottom: 20px;
+    }
+    .custom-heading {
+      margin-bottom: 80px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row justify-content-center mb-4 dark-header">
+      <div class="col text-center">
+        <h1>INVENTORY MANAGEMENT SYSTEM</h1>
+      </div>
+    </div>
+    <div class="row mb-4 custom-heading">
+      <div class="col">
+        <h2>Edit Inspection</h2>
+        <form action="/update/<%= row.INSPECTION_ID %>" method="post">
+          <div class="form-group">
+            <label for="recno">Receipt No:</label>
+            <input type="text" class="form-control" id="recno" name="recno" value="<%= row.RECEIPT_NO %>" required>
+          </div>
+          <div class="form-group">
+            <label for="inspecdate">Inspection Date:</label>
+            <input type="date" class="form-control" id="inspecdate" name="inspecdate" value="<%= row.INSPECTION_DATE %>" required>
+          </div>
+          <div class="form-group">
+            <label for="inspecres">Inspection Result:</label>
+            <input type="text" class="form-control" id="inspecres" name="inspecres" value="<%= row.INSPECTION_RESULT %>" required>
+          </div>
+          <div class="form-group">
+            <label for="quantacc">Quantity Accept:</label>
+            <input type="text" class="form-control" id="quantacc" name="quantacc" value="<%= row.QUANTITY_ACCEPT %>" required>
+          </div>
+          <div class="form-group">
+            <label for="quantrej">Quantity Reject:</label>
+            <input type="text" class="form-control" id="quantrej" name="quantrej" value="<%= row.QUANTITY_REJECT %>" required>
+          </div>
+          <div class="form-group">
+            <label for="itemid">Item ID:</label>
+            <input type="text" class="form-control" id="itemid" name="itemid" value="<%= row.ITEM_ID %>" required>
+          </div>
+         
+          <button type="submit" class="btn btn-primary">Update</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

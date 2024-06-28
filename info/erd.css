@@ -1,0 +1,8 @@
+html, body {
+    background-color: black;
+  }
+  
+  #erd, #erf {
+    filter: drop-shadow(0 0 0.75rem rgb(255, 217, 0));
+  }
+  

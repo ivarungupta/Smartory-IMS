@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IMS-Edit Sale</title>
+  <link rel="icon" type="image/x-icon" href="info/favicon.png">
+
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: black;
+      color: white;
+    }
+    .dark-header {
+      background-color: #1174de;
+      color: white;
+      padding: 40px 0;
+      margin-bottom: 20px;
+    }
+    .custom-heading {
+      margin-bottom: 80px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row justify-content-center mb-4 dark-header">
+      <div class="col text-center">
+        <h1>INVENTORY MANAGEMENT SYSTEM</h1>
+      </div>
+    </div>
+    <div class="row mb-4 custom-heading">
+      <div class="col">
+        <h2>Edit Sale</h2>
+        <form action="/update/<%= row.TRANSACTION_ID %>" method="post">
+          <div class="form-group">
+            <label for="cusid">Customer ID:</label>
+            <input type="text" class="form-control" id="cusid" name="cusid" value="<%= row.CUSTOMER_ID %>" required>
+          </div>
+          <div class="form-group">
+            <label for="itemid">Item ID:</label>
+            <input type="text" class="form-control" id="itemid" name="itemid" value="<%= row.ITEM_ID %>" required>
+          </div>
+          <div class="form-group">
+            <label for="transdate">Transaction Date:</label>
+            <input type="date" class="form-control" id="transdate" name="transdate" value="<%= row.TRANSACTION_DATE %>" required>
+          </div>
+          <div class="form-group">
+            <label for="quantsold">Quantity Sold:</label>
+            <input type="text" class="form-control" id="quantsold" name="quantsold" value="<%= row.QUANTITY_SOLD %>" required>
+          </div>
+          <div class="form-group">
+            <label for="rate">Rate:</label>
+            <input type="text" class="form-control" id="rate" name="rate" value="<%= row.RATE %>" required>
+          </div>
+          <div class="form-group">
+            <label for="tax">Tax:</label>
+            <input type="text" class="form-control" id="tax" name="tax" value="<%= row.TAX %>" required>
+          </div>
+          <div class="form-group">
+            <label for="totamt">Total Amount:</label>
+            <input type="text" class="form-control" id="totamt" name="totamt" value="<%= row.TOTAL_AMOUNT %>" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Update</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
