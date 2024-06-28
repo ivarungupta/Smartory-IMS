@@ -2,6 +2,9 @@
 
 Smartory (Inventory Management System) is a software system for tracking inventory levels, orders, sales, and deliveries. It is designed to streamline inventory processes, ensuring accuracy, productivity, and real-time data integration.
 
+![Example Image](Smartory-IMSHomepage.png)
+
+
 ## Technologies Used
 - Oracle Database
 - Node.js
