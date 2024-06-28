@@ -16,4 +16,4 @@ open new terminal after every step \
 -- node qr.js (3011)                 {table= *action on item master, html = qr.html js = qr.js} \
 -- node qr_2.js (3012)               {table= *none, html = qr_2.html js = qr_2.js} \
 
-now go live from the landing.html\
+now go live from the landing.html
