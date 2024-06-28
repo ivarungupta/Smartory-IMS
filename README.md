@@ -137,3 +137,11 @@ node qr.js
 
 # Generic QR Code
 node qr_2.js
+
+```
+## SNAPSHOTS
+
+![Example Image](IMS-Misc-Table.png)
+![Example Image](IMS-Items-QR-Generator2.png)
+![Example Image](IMS-ERD.png)
+
